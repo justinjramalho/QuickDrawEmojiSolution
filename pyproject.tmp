@@ -1,0 +1,9 @@
+[tool]
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+name = "app"
+version = "0.0.0"
+[tool.poetry.dependencies]
+flask = "==1.0.2"
+python = "^3.7"
+sklearn = "==0.0"

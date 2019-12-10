@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Quick Draw Emoji!</title>
+    {% if stylesheet %}
+    <!-- link to the CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    {% endif %}
+    <!-- import the p5.js library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <!-- import the code from the sketch.js file -->
+    <script type="text/javascript" src="static/sketch.js"></script>
+  </head>
+  <body>
+    <h2>
+      Quick Draw Emoji ✍️🤩
+      {% if creator %}
+        <span id="created-by">by {{creator}}</span>
+      {% endif %}
+    </h2>
+    
+    {% block content %}{% endblock %}
+
+    <div id="below-canvas">
+      <div id="instructions">
+        <h3>Instructions</h3>
+        <ul>
+          <li>Draw emojis and click the Emoji <b>Submit</b> buttons to begin training the Machine Learning model.</li>
+          <li>Click <b>CLEAR</b> to reset the drawing canvas.</li>
+          <li>Use the <b>DELETE</b> button to completely erase all previously submitted data and start over.</li>
+        </ul>
+      </div>
+      {% if explanation %}
+      <div id="explanation">
+        <h3>What is Machine Learning?</h3>
+        <p>Machine Learning is {{explanation}}</p>
+        <!-- TODO: Add more paragraphs with details about Machine Learning or how this specific project works. -->
+      </div>
+      {% endif %}
+      <div id="about">
+        <h3>About this Tutorial</h3>
+        <p>This machine learning coding project was created by following the <a href="make.sc/quickemojitutorial"><em>Quick, Draw Emoji!</em> tutorial</a> written by Jordan Arnesen for <a href="www.makeschool.com">Make School</a>.</p> 
+        <p>For feedback or questions about the tutorial, please <a href="mailto:hello@makeschool.com">email us</a>.</p>
+      </div>
+    </div>
+  </body>
+</html>

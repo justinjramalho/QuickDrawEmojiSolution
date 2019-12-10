@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if emojis %}
+  <div id="resultsdiv">
+  {% else %}
+  <div id="resultsdiv" hidden=true>
+  {% endif %}
+    <p class="results"><b>Training Data:</b> <span id="trained">none...</span></p>
+    <p class="results"><b>Current Guess:</b> <span id="guessed">waiting...</span></p>
+  </div>
+  <div id="rowdiv">
+    {% if emojis %}
+      <button id="delete-button" class="row1" type="button" onclick=deleteSamples();>☠️<br><span class="button-text">DELETE</span></button>
+    {% endif %}
+    <button id="clear-button" class="row1" type="button" onclick=resetGrid();>🚫<br><span class="button-text">CLEAR</span></button>
+
+    {% for emoji in emojis %}
+      <button class="row1" type="button" onclick=train('{{ emoji }}');>{{ emoji }}<br><span class="button-text">Submit</span></button>
+    {% endfor %}    
+  </div>
+{% endblock %}

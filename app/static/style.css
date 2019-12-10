@@ -1,0 +1,71 @@
+html, body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  padding: 20px;
+  background-color: rgb(144, 221, 211);
+  margin: 0px;
+  width: 100% - 20px;
+  text-align: left;
+}
+h1,h2,h3 {
+  font-size: 2em;
+  margin: 10px;
+  text-align: center;
+}
+p {
+  font-size: 1em;
+}
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+canvas {
+  margin: 10px 0px;
+}
+#created-by {
+  font-size: .3em;
+  color: rgb(100, 100, 100);
+}
+#rowdiv {
+  width: 100% - 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+#trained, #guessed {
+  font-size: 1.3em;
+}
+.row1 {
+  background-color: rgb(230, 230, 230);
+  font-size : 1.5em; 
+  height: 60px;
+  width: 60px;
+  padding: 0px 10px;
+  border: 0.2rem solid rgb(245, 245, 245);
+  /* border: 0.2rem solid rgb(144, 221, 211); */
+}
+button:hover {
+  background-color: rgb(245,245,245);
+}
+#delete-button {
+  border-color: rgb(241, 179, 179);
+}
+#delete-button:hover {
+  background-color: rgb(241, 179, 179);
+}
+#clear-button {
+  margin-right: 20px;
+  border-color: rgb(200, 200, 200);
+}
+#clear-button:hover {
+  background-color: rgb(200, 200, 200);
+}
+.button-text {
+  font-size: .3em;
+}
